@@ -72,10 +72,8 @@ main {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto 2fr;
   gap: .5rem;
-}
-
-main {
   margin: 0 2.5rem;
+  max-width: 1200px;
 }
 
 h3 {
