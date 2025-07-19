@@ -13,12 +13,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 .5rem;
   }
 
-  nav {
+  header nav {
     margin: 1rem;
     font-size: 2rem;
+  }
+
+  header h1 {
+    margin: 1rem;
   }
 
    header nav ul {
@@ -41,6 +44,10 @@
     max-width: 100%;
     margin: 0 auto;
     padding: 0 10%;
+  }
+
+  main h2 {
+    padding-bottom: 1rem;
   }
 
   main div {
