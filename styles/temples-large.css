@@ -13,6 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 .5rem;
   }
 
   nav {
@@ -50,7 +51,6 @@
 
   figure {
     margin: 0;
-    padding: auto;
   }
 
   img {

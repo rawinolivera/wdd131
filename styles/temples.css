@@ -9,11 +9,11 @@ header {
   position: relative;
 }
 
-header span {
-  margin: auto;
+header h1 {
+  margin: 0;
+  padding: 1rem;
   color: black;
   font-size: 2rem;
-  margin: 1rem;
 }
 
 #menu {
@@ -23,6 +23,7 @@ header span {
 	color: #000;
  	position: absolute;
 	right: 1rem;
+  top: 1rem;
 	left: auto;
 }
 
@@ -83,7 +84,7 @@ main {
   text-align: center;
 }
 
-main h1 {
+main h2 {
   margin-bottom: 0;
 }
 
