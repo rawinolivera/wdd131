@@ -1,0 +1,60 @@
+@media screen and (min-width: 500px) {
+
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  button {
+    display: none;
+  }
+
+  header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+  nav {
+    margin: 1rem;
+    font-size: 2rem;
+  }
+
+   header nav ul {
+    display: flex;
+		flex-direction: row;
+   }
+
+  nav ul li {
+    border: 0;
+  }
+
+  nav ul li:first-child {
+  border-top: 0;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10%;
+  }
+
+  main div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  figure {
+    margin: 0;
+    padding: auto;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
