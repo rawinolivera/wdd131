@@ -1,3 +1,9 @@
+:root {
+  --primary-color: #1ca5ff;
+  --accent-color: #d7efff;
+  --title-color: black;
+}
+
 body {
   font-family: 'Boogaloo', sans-serif;
   margin: 0;
@@ -5,25 +11,25 @@ body {
 
 header {
   text-align: center;
-  background-color: #1ca5ff;
+  background-color: var(--primary-color);
   position: relative;
 }
 
 header h1 {
   margin: 0;
   padding: 1rem;
-  color: black;
+  color: var(--title-color);
   font-size: 2.5rem;
   margin-bottom: .5rem;
 }
 
 h2 {
-
+  font-size: 1.5rem;
 }
 
 main {
   max-width: 640px;
-  background-color: #d7efff;
+  background-color: var(--accent-color);
   display: grid;
   grid-template-columns: 1fr;
   text-align: center;
@@ -39,6 +45,18 @@ section img {
   width: 3rem;
 }
 
+section p {
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+section p:last-child {
+  margin-bottom: 1.5rem;
+}
+
+#w-chill::after {
+  content: " °C";
+}
 
 
 
@@ -49,7 +67,7 @@ footer {
   grid-column: 1 / 4;
   grid-row: 3 / 4;
   text-align: center;
-  background-color: #1ca5ff;
+  background-color: var(--primary-color);
 }
 
 footer p {
@@ -57,7 +75,7 @@ footer p {
 }
 
 footer > :first-child {
-  color: black;
+  color: var(--title-color);
   font-family: 'Boogaloo', sans-serif;
   font-size: 1.8rem;
   text-shadow: .5px 1.5px 1px white;
