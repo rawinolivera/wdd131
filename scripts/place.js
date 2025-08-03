@@ -6,8 +6,8 @@ document.querySelector('#last-mod').textContent = document.lastModified;
 
 const temp = 10;
 const windSpeed = 14;
-document.querySelector('#temp').textContent = `${temp}`;
-document.querySelector('#wind').textContent = `${windSpeed}`;
+document.querySelector('#temp').textContent = `${temp} °C`;
+document.querySelector('#wind').textContent = `${windSpeed} km/h`;
 
 function calculateWindChill(temp, windSpeed) {
   if(temp <= 10 && windSpeed >= 4.8){
