@@ -23,25 +23,27 @@
       <source srcset="images/hero-medium.webp" media="(min-width: 550px)">
       <img src="images/hero-small.webp" alt="Rio de Janeiro">
     </picture>
-    <section>
-      <h2>Data</h2>
-      <p>Area: <span id="area">1,221 km²</span></p>
-      <p>Population: <span id="populatio">6,211,423</span></p>
-      <p>Capital: <span id="capital">Rio de Janeiro</span></p>
-      <p>Languages: <span id="language">Portuguese</span></p>
-      <p>Currency: <span id="currency">Brazilian Real (BRL)</span></p>
-      <p>Time Zone: <span id="time-zone">GMT-3</span></p>
-      <p>Calling Code: <span id="call-code">+55</span></p>
-      <p>Internet TLD: <span id="tld">.br</span></p>
-    </section>
-    <section>
-      <h2>Weather</h2>
-      <img src="images/weather.svg" alt="Weather img">
-      <p>Temperature: <span id="temp"></span>°C</p>
-      <p>Conditions: <span id="condit">Partly Cloudy</span></p>
-      <p>Wind: <span id="wind"></span>km/h</p>
-      <p>Wind Chill: <span id="w-chill"></span></p>
-    </section>
+    <div>
+      <section class="data">
+        <h2>Data</h2>
+        <p>Area: <span id="area">1,221 km²</span></p>
+        <p>Population: <span id="populatio">6,211,423</span></p>
+        <p>Capital: <span id="capital">Rio de Janeiro</span></p>
+        <p>Languages: <span id="language">Portuguese</span></p>
+        <p>Currency: <span id="currency">Brazilian Real (BRL)</span></p>
+        <p>Time Zone: <span id="time-zone">GMT-3</span></p>
+        <p>Calling Code: <span id="call-code">+55</span></p>
+        <p>Internet TLD: <span id="tld">.br</span></p>
+      </section>
+      <section class="weather">
+        <h2>Weather</h2>
+        <img id="wlogo" src="images/weather.svg" alt="Weather img">
+        <p>Temperature: <span id="temp"></span>°C</p>
+        <p>Conditions: <span id="condit">Partly Cloudy</span></p>
+        <p>Wind: <span id="wind"></span>km/h</p>
+        <p>Wind Chill: <span id="w-chill"></span></p>
+      </section>
+    </div>
   </main>
   <footer>
     <p>&#169;<span id="current-year"></span> | Rawin Olivera | Venezuela</p>

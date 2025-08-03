@@ -41,7 +41,8 @@ picture img {
   display: block;
 }
 
-section img {
+section #wlogo {
+  align-items: center;
   width: 3rem;
 }
 
