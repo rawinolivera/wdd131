@@ -81,7 +81,7 @@ const temples = [
     dedicated: "1978, Octuber, 30",
     area: 59246,
     imageUrl: 
-    "https://churchofjesuschristtemples.org/assets/img/temples/_temp/017-S%C3%A3o-Paulo-Brazil-Temple.jpg"
+    "https://churchofjesuschristtemples.org/assets/img/temples/sao-paulo-brazil-temple/sao-paulo-brazil-temple-46814-thumb.jpg"
   },
   {
     templeName: "Lima Peru Los Olivos",
@@ -98,7 +98,23 @@ const temples = [
     area: 41010,
     imageUrl: 
     "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-2642-main.jpg"
-  }
+  },
+  {
+    templeName: "Sapporo Japan",
+    location: "Sapporo, Japan",
+    dedicated: "2016, August, 21",
+    area: 48480,
+    imageUrl: 
+    "https://churchofjesuschristtemples.org/assets/img/temples/sapporo-japan-temple/sapporo-japan-temple-3374-main.jpg"
+  },
+  {
+    templeName: "Belém Brazil",
+    location: "Belém, Brazil",
+    dedicated: "2022, November, 20",
+    area: 28675,
+    imageUrl:
+    "https://churchofjesuschristtemples.org/assets/img/temples/belem-brazil-temple/belem-brazil-temple-31310-main.jpg"
+    }
   // Add more temple objects here...
 ];
 
