@@ -18,6 +18,7 @@ window.addEventListener("resize", () => {
   }
 });
 
+const container = document.querySelector(".grid-temples");
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -114,14 +115,54 @@ const temples = [
     area: 28675,
     imageUrl:
     "https://churchofjesuschristtemples.org/assets/img/temples/belem-brazil-temple/belem-brazil-temple-31310-main.jpg"
-    }
+  }
   // Add more temple objects here...
 ];
 
-createTempleCard();
+createTempleCard(temples);
 
-function createTempleCard(){
-  temples.forEach(temple => {
+const oldTemples = document.querySelector("#old");
+const newTemples = document.querySelector("#new");
+const largeTemples = document.querySelector("#large");
+const smallTemples = document.querySelector("#small");
+
+oldTemples.addEventListener("click", (event) => {
+  event.preventDefault();
+  const filteredTemples = temples.filter(temple => {
+    let yearDedicated = parseInt(temple.dedicated.toString().substring(0,4), 10);
+    return yearDedicated < 1900;
+  });
+  createTempleCard(filteredTemples);
+});
+
+newTemples.addEventListener("click", (event) => {
+  event.preventDefault();
+  const filteredTemples = temples.filter(temple => {
+    let yearDedicated = parseInt(temple.dedicated.toString().substring(0,4), 10);
+    return yearDedicated > 2000;
+  });
+  createTempleCard(filteredTemples);
+});
+
+largeTemples.addEventListener("click", (event) => {
+  event.preventDefault();
+  const filteredTemples = temples.filter(temple => {
+    return temple.area > 90000;
+  });
+  createTempleCard(filteredTemples);
+});
+
+smallTemples.addEventListener("click", (event) => {
+  event.preventDefault();
+  const filteredTemples = temples.filter(temple => {
+    return temple.area < 10000;
+  });
+  createTempleCard(filteredTemples);
+});
+
+function createTempleCard(filteredTemples){
+  container.innerHTML = "";
+  filteredTemples.forEach(temple => {
     let card = document.createElement("section");
     let name = document.createElement("h3");
     let location = document.createElement("p");
