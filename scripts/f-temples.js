@@ -77,12 +77,12 @@ const temples = [
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
   {
-    templeName: "São Paulo Brazil",
-    location: "São Paulo, Brazil",
-    dedicated: "1978, Octuber, 30",
-    area: 59246,
+    templeName: "St. George Utah",
+    location: "St. George, Utah, United States",
+    dedicated: "1877, April, 6",
+    area: 143969,
     imageUrl: 
-    "https://churchofjesuschristtemples.org/assets/img/temples/sao-paulo-brazil-temple/sao-paulo-brazil-temple-46814-thumb.jpg"
+    "https://churchofjesuschristtemples.org/assets/img/temples/st.-george-utah-temple/st.-george-utah-temple-40435-main.jpg"
   },
   {
     templeName: "Lima Peru Los Olivos",
@@ -132,6 +132,7 @@ oldTemples.addEventListener("click", (event) => {
     let yearDedicated = parseInt(temple.dedicated.toString().substring(0,4), 10);
     return yearDedicated < 1900;
   });
+  document.querySelector("h2").innerText = "Old Temples"
   createTempleCard(filteredTemples);
 });
 
@@ -141,6 +142,7 @@ newTemples.addEventListener("click", (event) => {
     let yearDedicated = parseInt(temple.dedicated.toString().substring(0,4), 10);
     return yearDedicated > 2000;
   });
+  document.querySelector("h2").innerText = "New Temples"
   createTempleCard(filteredTemples);
 });
 
@@ -149,6 +151,7 @@ largeTemples.addEventListener("click", (event) => {
   const filteredTemples = temples.filter(temple => {
     return temple.area > 90000;
   });
+  document.querySelector("h2").innerText = "Large Temples"
   createTempleCard(filteredTemples);
 });
 
@@ -157,6 +160,7 @@ smallTemples.addEventListener("click", (event) => {
   const filteredTemples = temples.filter(temple => {
     return temple.area < 10000;
   });
+  document.querySelector("h2").innerText = "Small Temples"
   createTempleCard(filteredTemples);
 });
 
@@ -173,10 +177,12 @@ function createTempleCard(filteredTemples){
     name.textContent = temple.templeName;
     location.innerHTML = `<span class ="label">Location:</span> ${temple.location}`
     dedication.innerHTML = `<span class ="label">Dedicated:</span> ${temple.dedicated}`
-    area.innerHTML = `<span class ="label">Location:</span> ${temple.area} sq ft`
+    area.innerHTML = `<span class ="label">Area:</span> ${temple.area} sq ft`
     img.setAttribute("src", temple.imageUrl);
     img.setAttribute("alt", `${temple.templeName} Temple`);
     img.setAttribute("loading", "lazy");
+    img.setAttribute("width","400");
+    img.setAttribute("height","225")
 
     card.appendChild(name);
     card.appendChild(location);
