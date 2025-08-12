@@ -41,7 +41,7 @@ form {
   row-gap: 12px;
 }
 
-label #opt {
+label .opt {
   color: darkblue;
 }
 
