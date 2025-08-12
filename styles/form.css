@@ -137,7 +137,7 @@ input[type=submit] {
 }
 
 .color {
-  color: #00008b;
+  text-shadow: .2px 0.2px 2px gray;
 }
 
 .review {
@@ -153,13 +153,13 @@ input[type=submit] {
   font-size: 1.5rem;
 }
 
-footer {  
+footer {
   margin: 0rem;
   padding: 1rem;
   grid-column: 1 / 4;
   grid-row: 3 / 4;
   text-align: center;
-  background-color: var(--primary-color);
+  background-color: #1ca5ff;
 }
 
 footer p {
@@ -167,14 +167,14 @@ footer p {
 }
 
 footer > :first-child {
-  color: var(--title-color);
+  color: black;
   font-family: 'Boogaloo', sans-serif;
   font-size: 1.8rem;
   text-shadow: .5px 1.5px 1px white;
 }
 
 footer > :nth-child(2){
-  color: #0033a0;
+  color: #002981;
   font-size: 1.2rem;
   font-weight: 200;
   font-weight: bold;
