@@ -136,6 +136,10 @@ input[type=submit] {
   }
 }
 
+.color {
+  color: #00008b;
+}
+
 .review {
   display: grid;
   padding: 8rem 0;
