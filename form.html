@@ -8,25 +8,24 @@
   <meta name="author" content="Rawin Olivera">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Edu+QLD+Beginner:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Edu+QLD+Beginner:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/form.css">
   <script src="scripts/form.js" defer></script>
 </head>
 <body>
   <header>
     <h1>Product Review Form</h1>
-    <p id="counter"></p>
   </header>
   <main>
     <form action="review.html" method="get">
-      <label for="product">Product name</label>
+      <label for="product">Product name<span style="color:red"> *</span></label>
         <select name="product" id="product" required>
           <option value="" disabled selected>Select a Product</option>
         </select>
       <fieldset>
-        <legend>Overal Rating</legend>
+        <legend>Overal Rating<span style="color:red"> *</span></legend>
         <div class="star-rating">
-          <input type="radio" name="stars" id="star-a" value="5"/>
+          <input type="radio" name="stars" id="star-a" value="5" required/>
           <label for="star-a"></label>
           <input type="radio" name="stars" id="star-b" value="4"/>
           <label for="star-b"></label>
@@ -38,24 +37,24 @@
           <label for="star-e"></label>
         </div>
       </fieldset>
-      <label for="idate">Date of Installation</label>
+      <label for="idate">Date of Installation<span style="color:red"> *</span></label>
         <input type="date" name="installationDate" id="idate" required>
       <fieldset>
         <legend>Which feature did you find usefull in the product?<br>(Check all that apply)</legend>
-          <label class="checkbox-item">
-            <input type="checkbox" name="use" value="4">
+          <label class="checkbox-item" for="feature4">
+            <input type="checkbox" id="feature4" name="use" value="4">
             Durability
           </label>
-          <label class="checkbox-item">
-            <input type="checkbox" name="use" value="3">
+          <label class="checkbox-item" for="feature3">
+            <input type="checkbox" id="feature3" name="use" value="3">
             Ease of Use
           </label>
-          <label class="checkbox-item">
-            <input type="checkbox" name="use" value="2">
+          <label class="checkbox-item" for="feature2">
+            <input type="checkbox" id="feature2" name="use" value="2">
             Performance
           </label>
-          <label class="checkbox-item">
-            <input type="checkbox" name="use" value="1">
+          <label class="checkbox-item" for="feature1">
+            <input type="checkbox" id="feature1" name="use" value="1">
             Design
           </label>
       </fieldset>
@@ -63,7 +62,7 @@
         <textarea name="review" id="review"></textarea>
       </label>
       <label for="userName">Your Name <span class="opt">(Optional)</span>
-        <input type="text" id="userName" name="userName">
+        <input type="text" id="userName" name="userName" autocomplete="name">
       </label>
       <input type="submit" value="Post Review">
     </form>

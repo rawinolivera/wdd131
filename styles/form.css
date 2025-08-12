@@ -104,8 +104,10 @@ fieldset {
   border:none
 }
 
-input, option {
+input, select, option, textarea {
   font-family: 'Edu QLD Beginner', sans-serif;
+  text-shadow: 0 0 1px rgba(0,0,0,0.05);
+  font-size: 1.2rem;
 }
 
 input[type=submit] {
@@ -134,7 +136,20 @@ input[type=submit] {
   }
 }
 
-footer {
+.review {
+  display: grid;
+  padding: 8rem 0;
+}
+
+.review h2 {
+  font-size: 2rem;
+}
+
+.review p {
+  font-size: 1.5rem;
+}
+
+footer {  
   margin: 0rem;
   padding: 1rem;
   grid-column: 1 / 4;

@@ -38,25 +38,10 @@ function createOption (){
     let option = document.createElement("option");
 
     option.textContent = `${item.name}`
-    option.id = `${item.id}`
+    option.value = `${item.id}`
 
     product.appendChild(option);
   })
-}
+};
 
 createOption();
-
-let countReview = localStorage.getItem('review');
-
-if(!countReview) {
-  countReview = 0;
-}else{
-  countReview = parseInt(countReview, 10);
-}
-
-countReview++;
-
-localStorage.setItem('review',countReview);
-
-const message = document.getElementById("counter");
-message.textContent = `review complete: ${countReview}`
