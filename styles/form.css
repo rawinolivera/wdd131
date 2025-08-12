@@ -1,0 +1,163 @@
+:root {
+  --primary-color: #1ca5ff;
+  --accent-color: #d7efff;
+  --title-color: black;
+}
+
+body {
+  font-family: 'Boogaloo', sans-serif;
+  margin: 0;
+  margin: 0;
+  width: 100%;
+}
+
+header {
+  text-align: center;
+  background-color: var(--primary-color);
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  padding: 1rem;
+  color: var(--title-color);
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  background-color: #d7efff;
+}
+
+form {
+  background-color: #e4eef1;
+  display: flex;
+  flex-direction: column;
+  padding: .5rem;
+  border: solid 1px #000;
+  margin: 1rem 0;
+  row-gap: 12px;
+}
+
+label #opt {
+  color: darkblue;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="submit"],
+select, textarea {
+  width: 100%;
+  box-sizing: border-box;
+  height: 40px;
+  font-size: 1rem;
+  line-height: 1.2;
+  resize: vertical;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  margin: 5px 8px 5px 4px;
+}
+
+.star-rating {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin: 0;
+  position: relative;
+}
+/* hide the inputs */
+.star-rating input {
+  display: none;
+}
+/* set properties of all labels */
+.star-rating > label {
+  width: 30px;
+  height: 30px;
+  font-family: Arial;
+  font-size: 30px;
+  transition: 0.2s ease;
+  color: rgb(0, 89, 255);
+}
+/* give label a hover state */
+.star-rating label:hover {
+  color: #ff69b4;
+  transition: 0.2s ease;
+}
+.star-rating label:active::before {
+  transform:scale(1.1);
+}
+
+fieldset {
+  padding: 0rem;
+  margin: 0;
+  border:none
+}
+
+input, option {
+  font-family: 'Edu QLD Beginner', sans-serif;
+}
+
+input[type=submit] {
+  background-color: rgb(155, 151, 151);
+  font-weight: bold;
+  font-family: 'Boogaloo', sans-serif;
+  font-size: 2rem;
+}
+
+/* set shape of unselected label */
+.star-rating label::before {
+  content: '\2606';
+  position: absolute;
+  top: 0px;
+  line-height: 26px;
+}
+/* set full star shape for checked label and those that come after it */
+.star-rating input:checked ~ label:before {
+  content:'\2605';
+}
+
+@-moz-document url-prefix() {
+  .star-rating input:checked ~ label:before {
+  font-size: 36px;
+  line-height: 21px;
+  }
+}
+
+footer {
+  margin: 0rem;
+  padding: 1rem;
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+  text-align: center;
+  background-color: var(--primary-color);
+}
+
+footer p {
+  margin: 0;
+}
+
+footer > :first-child {
+  color: var(--title-color);
+  font-family: 'Boogaloo', sans-serif;
+  font-size: 1.8rem;
+  text-shadow: .5px 1.5px 1px white;
+}
+
+footer > :nth-child(2){
+  color: #0033a0;
+  font-size: 1.2rem;
+  font-weight: 200;
+  font-weight: bold;
+  text-shadow: .5px .5px .5px #000;
+}

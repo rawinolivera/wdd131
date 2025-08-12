@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>W05 Product Review Form</title>
+  <meta name="description" content="HTML form with confirmation page">
+  <meta name="author" content="Rawin Olivera">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Edu+QLD+Beginner:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Product Review Form</h1>
+  </header>
+  <main>
+    <form action="review.html" method="get">
+      <label for="product">Product name</label>
+        <select name="product" id="product" required>
+          <option value="0" disabled selected>Select a Product</option>
+        </select>
+      <fieldset>
+        <legend>Overal Rating</legend>
+        <div class="star-rating">
+          <input type="radio" name="stars" id="star-a" value="5"/>
+          <label for="star-a"></label>
+          <input type="radio" name="stars" id="star-b" value="4"/>
+          <label for="star-b"></label>
+          <input type="radio" name="stars" id="star-c" value="3"/>
+          <label for="star-c"></label>
+          <input type="radio" name="stars" id="star-d" value="2"/>
+          <label for="star-d"></label>
+          <input type="radio" name="stars" id="star-e" value="1"/>
+          <label for="star-e"></label>
+        </div>
+      </fieldset>
+      <label for="">Date of Installation</label>
+        <input type="date" name="installationDate" id="idate" required>
+      <fieldset>
+        <legend>Which feature did you find usefull in the product?<br>(Check all that apply)</legend>
+          <label class="checkbox-item">
+            <input type="checkbox" name="use" value="4">
+            Durability
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" name="use" value="3">
+            Ease of Use
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" name="use" value="2">
+            Performance
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" name="use" value="1">
+            Design
+          </label>
+      </fieldset>
+      <label for="review">Written Review <span id="opt">(Optional)</span>
+        <textarea name="review" id="review"></textarea>
+      </label>
+      <label for="userName">Your Name <span id="opt">(Optional)</span>
+        <input type="text" id="userName" name="userName">
+      </label>
+      <input type="submit" value="Post Review">
+    </form>
+  </main>
+  <footer>
+    <p>&#169;<span id="current-year"></span> | Rawin Olivera | Venezuela</p>
+    <p>Last Modified: <span id="last-mod"></span></p>
+  </footer>
+</body>
+</html>
