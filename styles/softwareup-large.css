@@ -1,0 +1,40 @@
+@media screen and (min-width: 500px) {
+
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  button {
+    display: none;
+  }
+
+  header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+  header nav {
+    margin: 1rem;
+    font-size: 2rem;
+  }
+
+  header h1 {
+    margin: 1rem;
+  }
+
+   header nav ul {
+    display: flex;
+		flex-direction: row;
+   }
+
+  nav ul li {
+    border: 0;
+  }
+
+  nav ul li:first-child {
+  border-top: 0;
+  }
+
+}
