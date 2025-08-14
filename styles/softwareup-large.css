@@ -1,4 +1,4 @@
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 450px) {
 
   body {
     max-width: 100%;
@@ -82,7 +82,7 @@
   }
 
   .home h2 {
-    font-size: min(2.5vw, 4.5vh);
+    font-size: 1.8rem;
     margin-top: .8rem;
   }
 
@@ -116,7 +116,7 @@
 }
 
 
-@media (min-width: 650px) and (max-width: 1020px) {
+@media (min-width: 450px) and (max-width: 1020px) {
 
   .hero {
     grid-column: 2 / 4;
