@@ -1,3 +1,23 @@
+var date = new Date();
+var year = date.getFullYear();
+document.querySelector('#current-year').textContent = year;
+document.querySelector('#last-mod').textContent = document.lastModified;
+
+const hamButton = document.querySelector("#menu");
+const navigation = document.querySelector("ul");
+
+hamButton.addEventListener("click", () => {
+	navigation.classList.toggle("open");
+	hamButton.classList.toggle("open");
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 500) {
+    navigation.classList.remove("open");
+	  hamButton.classList.remove("open");
+  }
+});
+
 faq = [
   {
     "question": "What is software development, and how does it work?",
@@ -36,6 +56,8 @@ function createFaq () {
 
     a.textContent = `${item.question}`
     p.textContent = `${item.answer}`
+    p.classList.add("answer");
+    h2.classList.add("question");
     h2.appendChild(a);
     div.appendChild(h2);
     div.appendChild(p);
@@ -45,60 +67,83 @@ function createFaq () {
 
 createFaq();
 
-recResources = {
+const resourcesContainer = document.querySelector(".resources");
+const rec = {
   "recommended_resources": {
     "books": [
-      {
-        "title": "Clean Code",
-        "author": "Robert C. Martin",
-        "description": "Fundamentals for writing clean and maintainable code."
-      },
-      {
-        "title": "The Phoenix Project",
-        "author": "Gene Kim",
-        "description": "A novel illustrating DevOps principles."
-      },
-      {
-        "title": "Accelerate",
-        "author": "Nicole Forsgren",
-        "description": "Studies on practices leading to high performance in software teams."
-      }
+      { "title": "Clean Code", "author": "Robert C. Martin", "description": "Fundamentals for writing clean and maintainable code." },
+      { "title": "The Phoenix Project", "author": "Gene Kim", "description": "A novel illustrating DevOps principles." },
+      { "title": "Accelerate", "author": "Nicole Forsgren", "description": "Studies on practices leading to high performance in software teams." }
     ],
     "websites": [
-      {
-        "name": "Stack Overflow",
-        "url": "https://stackoverflow.com/",
-        "description": "Active community for resolving technical questions."
-      },
-      {
-        "name": "GitHub",
-        "url": "https://github.com/",
-        "description": "Repository for open-source projects and collaboration."
-      },
-      {
-        "name": "Dev.to",
-        "url": "https://dev.to/",
-        "description": "Platform for sharing articles and experiences on software development."
-      }
+      { "name": "Stack Overflow", "url": "https://stackoverflow.com/", "description": "Active community for resolving technical questions." },
+      { "name": "GitHub", "url": "https://github.com/", "description": "Repository for open-source projects and collaboration." },
+      { "name": "Dev.to", "url": "https://dev.to/", "description": "Platform for sharing articles and experiences on software development." }
     ],
     "youtube_channels": [
-      {
-        "name": "ArjanCodes",
-        "description": "Tutorials on design patterns and software architecture.",
-        "url":"https://www.youtube.com/arjancodes"
-      },
-      {
-        "name": "Academind",
-        "description": "Clear explanations on modern technologies and practices.",
-        "url":"https://www.youtube.com/@academind"
-      },
-      {
-        "name": "The Net Ninja",
-        "description": "Courses on web development and programming tools.",
-        "url":"https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg"
-      }
+      { "name": "ArjanCodes", "description": "Tutorials on design patterns and software architecture.", "url":"https://www.youtube.com/arjancodes" },
+      { "name": "Academind", "description": "Clear explanations on modern technologies and practices.", "url":"https://www.youtube.com/@academind" },
+      { "name": "The Net Ninja", "description": "Courses on web development and programming tools.", "url":"https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg" }
     ]
+  }
+};
+
+function createResources() {
+  const categories = rec.recommended_resources;
+
+  for (const cat in categories) {
+    const divCategory = document.createElement("div");
+    divCategory.classList.add("category");
+    
+    const h2 = document.createElement("h2");
+    h2.textContent = cat.replace("_", " ").toUpperCase();
+    divCategory.appendChild(h2);
+
+    categories[cat].forEach(item => {
+      const divItem = document.createElement("div");
+      divItem.classList.add("item");
+
+      const title = document.createElement("h3");
+      title.textContent = item.title || item.name;
+      divItem.appendChild(title);
+
+      const desc = document.createElement("p");
+      desc.textContent = item.description;
+      divItem.appendChild(desc);
+
+      const author = document.createElement("p");
+      author.textContent = item.author;
+      divItem.appendChild(author);
+
+      if (item.url) {
+        const link = document.createElement("a");
+        link.href = item.url;
+        link.textContent = item.url;
+        link.target = "_blank"; // abrir en nueva pestaña
+        divItem.appendChild(link);
+      }
+
+      divCategory.appendChild(divItem);
+    });
+
+    resourcesContainer.appendChild(divCategory);
   }
 }
 
-resources = document.querySelector("resources")
+createResources();
+
+const faqs = document.querySelectorAll(".faq .question");
+faqs.forEach(h2 => {
+  const p = h2.nextElementSibling;
+
+  h2.addEventListener("click", () => {
+    const statusVisible = window.getComputedStyle(p).display === "block";
+    document.querySelectorAll(".faq .answer").forEach(pText => {
+      pText.style.display = "none";
+    });
+
+    if(!statusVisible){
+      p.style.display === "block";
+    }
+  });
+});

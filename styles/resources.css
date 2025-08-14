@@ -86,109 +86,22 @@ nav a:hover {
   padding: .5rem;
 }
 
-.joinus {
-  display: grid;
-  padding: 1rem;
-}
-
-.joinus img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-form {
-  background-color: #e4eef1;
-  display: flex;
-  flex-direction: column;
-  padding: .5rem;
-  border: solid 1px #000;
-  margin: 1rem 0;
-  row-gap: 12px;
-  min-width: 350px;
-  max-width: 600px;
-}
-
-label, fieldset {
-  font-size: 1.2rem;
-}
-
-label .opt {
-  color: darkblue;
-}
-
-form input[type="text"],
-form input[type="email"],
-form input[type="submit"],
-select, textarea {
-  width: 100%;
-  box-sizing: border-box;
-  height: 40px;
-  font-size: 1.2rem;
-  line-height: 1.2;
-  resize: vertical;
-}
-
-.radio-group {
-  display: grid;
-
-}
-
-.checkbox-item {
-  display: flex;
-  align-items: center;
-}
-
-input[type="checkbox"] {
-  transform: scale(1.2);
-  margin: 5px 8px 5px 4px;
-}
-
-fieldset {
-  padding: 0rem;
-  margin: 0;
-  border:none
-}
-
-input, #product, option, textarea {
-  font-family: 'Edu QLD Beginner', sans-serif;
-  text-shadow: 0 0 1px rgba(0,0,0,0.05);
-  font-size: 1.2rem;
-}
-
-input[type=submit] {
-  background-color: rgb(155, 151, 151);
-  font-weight: bold;
-  font-family: 'Boogaloo', sans-serif;
-  font-size: 2rem;
-}
-
-.info {
-  font-size:1.2rem; 
-  color:#555; 
-  margin-top:1rem;
-}
-
-.color {
-  text-shadow: .2px 0.2px 2px gray;
-}
-
-.review {
-  display: grid;
-  padding: 8rem 0;
-}
-
-.review h2 {
-  font-size: 2rem;
-}
-
-.review p {
-  font-size: 1.5rem;
-}
-
 header img {
     width: 100px;
     height: auto;
+}
+
+.faq {
+  padding: 1rem;
+}
+
+.resources {
+  background-color: rgba(163, 229, 255, 0.3);
+  padding: 1rem;
+}
+
+.faq p {
+  display: none;
 }
 
 footer {
@@ -268,4 +181,22 @@ footer > :nth-child(2){
   nav ul li:first-child {
   border-top: 0;
   }
+
+  main > .resources {
+    display: flex;
+  }
+
+  .resources .category {
+    padding: .5rem;
+  }
+
+  .item p {
+    margin: 0;
+  }
+
+
+
+
+
+
 }
