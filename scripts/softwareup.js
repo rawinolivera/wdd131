@@ -36,7 +36,6 @@ fetch(apiURL)
 
     const desc = jsObject.weather[0].description; //w-now
     const iconsrc= `https://openweathermap.org/img/w/${jsObject.weather[0].icon}.png`;
-    document.querySelector('#wlogo').textContent = iconsrc;
     document.querySelector('#wlogo').setAttribute('src', iconsrc);
     document.querySelector('#wlogo').setAttribute('alt', desc);
     document.querySelector('#condit').textContent = desc;
@@ -47,7 +46,7 @@ let sp = parseFloat(document.querySelector("#wind").textContent);
 let windchill = "";
 
 if (te <= 50 && sp > 3){
-    windchill = windChill(t, s);
+    windchill = windChill(te, sp);
     windchill = `${windchill}&#176;F`;
 } else {
     windchill = "N/A";
@@ -59,7 +58,7 @@ function windChill(te,sp) {
     return Math.round(35.74 + .6215 * te - 35.75 * Math.pow(sp, 0.16) + 0.4275 * te * Math.pow(s, 0.16));
 }
 
-
+//Random Quotes Data
 const quotes = [
   {
     "quote": "Programs are primarily meant to be read and understood by humans first, and only incidentally executed by computers for results.",
@@ -87,16 +86,12 @@ const quotes = [
   }
 ]
 
-
 // Random quote 
 function getRandomQuote() {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   return quotes[randomIndex];
 }
-
-// Ejemplo: mostrar en consola
 const randomQuote = getRandomQuote();
-console.log(`"${randomQuote.quote}" — ${randomQuote.author}`);
 
 document.querySelector(".quote").textContent = `${randomQuote.quote}`;
 document.querySelector(".autor").textContent = `— ${randomQuote.author}`;

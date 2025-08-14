@@ -1,0 +1,271 @@
+body {
+  font-family: 'Boogaloo', sans-serif;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  background-color: #1ca5ff;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+header img {
+  width: 60%;
+  height: auto;
+  text-align: center;
+  padding: .5rem;
+}
+
+header h1 {
+  margin: 0;
+  padding: 1rem 0;
+  color: black;
+  font-size: 2rem;
+}
+
+#menu {
+	font-size: 1.6rem;
+	border: 0;
+	background: none;
+	color: #000;
+ 	position: absolute;
+	right: 1rem;
+  top: .5rem;
+	left: auto;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "❌";
+}
+
+nav {
+	grid-column: 1 / 4;
+  text-align: center;
+}
+
+header nav ul {
+  display: none;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.open {
+  display: block;
+}
+
+nav ul li {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  list-style: none;
+  border-bottom: 1px solid #000;
+}
+
+nav ul li:first-child {
+  border-top: 1px solid #000;
+}
+
+ul a {
+  display: block;
+  padding: .5rem;
+  color: #000;
+  width: 100%;
+}
+
+nav a:hover {
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  padding: .5rem;
+}
+
+.joinus {
+  display: grid;
+  padding: 1rem;
+}
+
+.joinus img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+form {
+  background-color: #e4eef1;
+  display: flex;
+  flex-direction: column;
+  padding: .5rem;
+  border: solid 1px #000;
+  margin: 1rem 0;
+  row-gap: 12px;
+  min-width: 350px;
+  max-width: 600px;
+}
+
+label, fieldset {
+  font-size: 1.2rem;
+}
+
+label .opt {
+  color: darkblue;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="submit"],
+select, textarea {
+  width: 100%;
+  box-sizing: border-box;
+  height: 40px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  resize: vertical;
+}
+
+.radio-group {
+  display: grid;
+
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  margin: 5px 8px 5px 4px;
+}
+
+fieldset {
+  padding: 0rem;
+  margin: 0;
+  border:none
+}
+
+input, #product, option, textarea {
+  font-family: 'Edu QLD Beginner', sans-serif;
+  text-shadow: 0 0 1px rgba(0,0,0,0.05);
+  font-size: 1.2rem;
+}
+
+input[type=submit] {
+  background-color: rgb(155, 151, 151);
+  font-weight: bold;
+  font-family: 'Boogaloo', sans-serif;
+  font-size: 2rem;
+}
+
+.info {
+  font-size:1.2rem; 
+  color:#555; 
+  margin-top:1rem;
+}
+
+.color {
+  text-shadow: .2px 0.2px 2px gray;
+}
+
+.review {
+  display: grid;
+  padding: 8rem 0;
+}
+
+.review h2 {
+  font-size: 2rem;
+}
+
+.review p {
+  font-size: 1.5rem;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+footer {
+  margin: 0rem;
+  padding: 1rem;
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+  text-align: center;
+  background-color: #1ca5ff;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer > :first-child {
+  color: black;
+  font-family: 'Boogaloo', sans-serif;
+  font-size: 1.8rem;
+  text-shadow: .5px 1.5px 1px white;
+}
+
+footer > :nth-child(2){
+  color: #002981;
+  font-size: 1.2rem;
+  font-weight: 200;
+  font-weight: bold;
+  text-shadow: .5px .5px .5px #000;
+}
+
+@media screen and (min-width: 660px) {
+
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  button {
+    display: none;
+  }
+
+  header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+  header h1 {
+    font-size: 4vw;
+    margin: 0;
+  }
+
+  nav ul {
+  display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+  }
+
+  header nav {
+    margin-right: 1rem;
+    font-size: 2.5rem;
+  }
+
+  header h1 {
+    margin: 1rem;
+  }
+
+  header nav ul {
+  display: flex;
+  flex-direction: row;
+  }
+
+  nav ul li {
+    border: 0;
+  }
+
+  nav ul li:first-child {
+  border-top: 0;
+  }
+}
