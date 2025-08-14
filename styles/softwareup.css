@@ -9,16 +9,19 @@ header {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
 }
 
 header img {
-  width: 80%;
+  width: 60%;
   height: auto;
+  text-align: center;
+  padding: 1rem;
 }
 
 header h1 {
   margin: 0;
-  padding: .5rem;
+  padding: 1rem 0;
   color: black;
   font-size: 2rem;
 }
@@ -42,10 +45,9 @@ header h1 {
 	content: "❌";
 }
 
-nav ul {
-  display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
+nav {
+	grid-column: 1 / 4;
+  text-align: center;
 }
 
 header nav ul {
@@ -84,10 +86,63 @@ nav a:hover {
   padding: .5rem;
 }
 
+.hero {
+  width: 100%;
+  height: auto;
+}
 
 
+.home {
+  display: grid;
+}
 
+.home h2 {
+  margin-bottom: 0;
+  padding-left: 1rem;
+}
 
+.home ol {
+  padding: 1rem;
+  margin: 0;
+}
+
+.home-s1 li {
+    list-style: none;
+    font-size: 3.5vh;
+}
+
+.box {
+  padding: 1rem;
+  margin: 0;
+  background-color: rgba(163, 229, 255, 0.3);
+}
+
+.box h2 + img {
+  display: inline-block; /* hace que la imagen se alinee con el h2 */
+  vertical-align: middle;
+  margin-left: 10px;     /* espacio entre ellos */
+}
+
+.box h2 {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.box p {
+  margin: 0;
+  font-size: 3.5vh;
+}
+
+.box img {
+  width: 20%;
+}
+
+.box p span{
+  font-family: 'Edu QLD Beginner', sans-serif;
+  font-size: 1.2rem;
+}
 
 footer {
   margin: 0rem;
