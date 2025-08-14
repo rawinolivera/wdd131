@@ -16,7 +16,7 @@ header img {
   width: 60%;
   height: auto;
   text-align: center;
-  padding: 1rem;
+  padding: .5rem;
 }
 
 header h1 {
@@ -97,7 +97,7 @@ nav a:hover {
 }
 
 .home h2 {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   padding-left: 1rem;
 }
 
@@ -113,6 +113,7 @@ nav a:hover {
 
 .box {
   padding: 1rem;
+  padding-top: 0;
   margin: 0;
   background-color: rgba(163, 229, 255, 0.3);
 }
@@ -126,11 +127,17 @@ nav a:hover {
 .box h2 {
   display: inline-block;
   vertical-align: middle;
-  padding-left: 0;
+  padding-left: 1rem;
   margin-top: 0;
 }
 
-.box p {
+.random h2 {
+  padding-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+
+.box, .random p {
   margin: 0;
   font-size: 3.5vh;
 }
@@ -139,7 +146,22 @@ nav a:hover {
   width: 20%;
 }
 
+.box p {
+  margin: 0;
+}
+
 .box p span{
+  font-family: 'Edu QLD Beginner', sans-serif;
+  font-size: 1.2rem;
+}
+
+.random {
+  padding: 1rem;
+  padding-top: 0;
+  margin: 0;
+}
+
+.random p {
   font-family: 'Edu QLD Beginner', sans-serif;
   font-size: 1.2rem;
 }

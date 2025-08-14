@@ -42,24 +42,61 @@ fetch(apiURL)
     document.querySelector('#condit').textContent = desc;
   });  
 
-
-
-
-
-let t = parseFloat(document.querySelector("#temp").textContent);
-let s = parseFloat(document.querySelector("#wind").textContent);
+let te = parseFloat(document.querySelector("#temp").textContent);
+let sp = parseFloat(document.querySelector("#wind").textContent);
 let windchill = "";
 
-if (t <= 50 && s > 3){
+if (te <= 50 && sp > 3){
     windchill = windChill(t, s);
     windchill = `${windchill}&#176;F`;
 } else {
     windchill = "N/A";
 } 
-
 //output
 document.querySelector("#w-chill").innerHTML = windchill;
 
-function windChill(temp,speed) {
-    return Math.round(35.74 + .6215 * t - 35.75 * Math.pow(s, 0.16) + 0.4275 * t * Math.pow(s, 0.16));
+function windChill(te,sp) {
+    return Math.round(35.74 + .6215 * te - 35.75 * Math.pow(sp, 0.16) + 0.4275 * te * Math.pow(s, 0.16));
 }
+
+
+const quotes = [
+  {
+    "quote": "Programs are primarily meant to be read and understood by humans first, and only incidentally executed by computers for results.",
+    "author": "Donald Knuth"
+  },
+  {
+    "quote": "There are only two kinds of programming languages: those that people always complain about endlessly and those that nobody ever actually uses.",
+    "author": "Bjarne Stroustrup"
+  },
+  {
+    "quote": "The most dangerous phrase in the programming language is always, 'We have always done it this way,' which stops innovation and learning.",
+    "author": "Grace Hopper"
+  },
+  {
+    "quote": "Talk is cheap and anyone can say many things, but what truly matters in software development is to actually show me the working code.",
+    "author": "Linus Torvalds"
+  },
+  {
+    "quote": "Writing good code is not only about functionality but also about readability and maintainability, because good code is its own best documentation.",
+    "author": "Steve McConnell"
+  },
+  {
+    "quote": "First, fully understand and solve the problem at hand with clear thinking, and only afterwards proceed to write the actual code implementation efficiently.",
+    "author": "John Johnson"
+  }
+]
+
+
+// Random quote 
+function getRandomQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  return quotes[randomIndex];
+}
+
+// Ejemplo: mostrar en consola
+const randomQuote = getRandomQuote();
+console.log(`"${randomQuote.quote}" — ${randomQuote.author}`);
+
+document.querySelector(".quote").textContent = `${randomQuote.quote}`;
+document.querySelector(".autor").textContent = `— ${randomQuote.author}`;

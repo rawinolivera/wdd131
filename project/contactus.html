@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Join Us</title>
   <meta name="description" content="Details about my project">
   <meta name="author" content="Rawin Olivera">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Edu+QLD+Beginner:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles/softwareup.css">
-  <link rel="stylesheet" href="../styles/softwareup-large.css">
+  <link rel="stylesheet" href="../styles/joinus.css">
   <script src="../scripts/softwareup.js" defer></script>
 </head>
 <body>
@@ -28,8 +27,53 @@
       </ul>
     </nav>
   </header>
-  <main>
-   
+  <main class="joinus">
+     <div class="side"> 
+      <h2>“Be part of a community passionate about continuous improvement in software development. Share ideas, learn from others, and stay updated with best practices.”</h2>
+      <img src="../images/join.webp" alt="Join pic">
+    </div>
+
+    <form action="review.html" method="get">
+      <label for="userName">Your Name
+        <input type="text" id="userName" name="userName" autocomplete="name" required>
+      </label>
+      <label for="userEmail">Your Email
+        <input type="email" id="userEmail" name="userEmail" autocomplete="email" required>
+      </label>
+      <fieldset>
+        <legend>About you:<span class="color"> *</span></legend>
+        <div class="radio-group">
+          
+          <label for="star-a">
+            <input type="radio" name="stars" id="star-a" value="5" required/>
+            Tech Student</label>
+          <label for="star-b">
+            <input type="radio" name="stars" id="star-b" value="4"/>
+            Tech Professional</label>
+          <label for="star-c"><input type="radio" name="stars" id="star-c" value="3"/>
+            Other</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>What is your insterest?<br>(Check all that apply)</legend>
+          <label class="checkbox-item" for="feature4">
+            <input type="checkbox" id="feature4" name="use" value="4">
+            I wish to colaborate
+          </label>
+          <label class="checkbox-item" for="feature3">
+            <input type="checkbox" id="feature3" name="use" value="3" required>
+            I wish to receive news
+          </label>
+      </fieldset>
+      <label for="review">Comments <span class="opt">(Optional)</span>
+        <textarea name="review" id="review"></textarea>
+      </label>
+      <input type="submit" value="Post Review">
+      <p class="info">
+        Your information will only be used to send you updates and content related to software improvement. 
+        We do not share your data with third parties.
+      </p>
+    </form>
   </main>
   <footer>
     <p>&#169;<span id="current-year"></span> | Rawin Olivera | Venezuela</p>
