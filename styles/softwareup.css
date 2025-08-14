@@ -115,7 +115,7 @@ nav a:hover {
   padding: 1rem;
   padding-top: 0;
   margin: 0;
-  background-color: rgba(163, 229, 255, 0.3);
+  background-color: rgba(106, 137, 150, 0.3);
 }
 
 .box h2 + img {
@@ -187,7 +187,7 @@ footer > :first-child {
 }
 
 footer > :nth-child(2){
-  color: #0033a0;
+  color: #002981;
   font-size: 1.2rem;
   font-weight: 200;
   font-weight: bold;

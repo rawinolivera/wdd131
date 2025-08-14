@@ -100,9 +100,13 @@ header img {
   padding: 1rem;
 }
 
-.faq p {
+.faq .answer {
   display: none;
+  font-family: 'Edu QLD Beginner', sans-serif;
+  font-size: 1.3rem;
 }
+
+.faq
 
 footer {
   margin: 0rem;

@@ -143,7 +143,7 @@ faqs.forEach(h2 => {
     });
 
     if(!statusVisible){
-      p.style.display === "block";
+      p.style.display = "block";
     }
   });
 });
