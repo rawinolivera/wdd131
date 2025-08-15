@@ -54,7 +54,7 @@ function createFaq () {
     let a = document.createElement("a");
     let p = document.createElement("p");
 
-    a.textContent = `${item.question}`
+    a.textContent = `▼ ${item.question}`
     p.textContent = `${item.answer}`
     p.classList.add("answer");
     h2.classList.add("question");
