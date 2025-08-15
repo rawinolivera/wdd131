@@ -48,7 +48,7 @@ fetch(apiURL)
 
   let windchill = "";
 
-  if (te <= 50 && sp > 3){
+  if (te <= 10 && sp >= 4.8){
       windchill = windChill(te, sp);
       windchill = `${windchill} °C`;
   } else {
