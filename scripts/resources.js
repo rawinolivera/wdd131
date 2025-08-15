@@ -81,9 +81,9 @@ const rec = {
       { "name": "Dev.to", "url": "https://dev.to/", "description": "Platform for sharing articles and experiences on software development." }
     ],
     "youtube_channels": [
-      { "name": "ArjanCodes", "description": "Tutorials on design patterns and software architecture.", "url":"https://www.youtube.com/arjancodes" },
+      { "name": "ArjanCodes", "description": "Tutorials on design patterns and software architecture.", "url":"https://www.youtube.com/@ArjanCodes" },
       { "name": "Academind", "description": "Clear explanations on modern technologies and practices.", "url":"https://www.youtube.com/@academind" },
-      { "name": "The Net Ninja", "description": "Courses on web development and programming tools.", "url":"https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg" }
+      { "name": "The Net Ninja", "description": "Courses on web development and programming tools.", "url":"https://www.youtube.com/@NetNinja" }
     ]
   }
 };
