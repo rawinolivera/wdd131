@@ -20,12 +20,6 @@
     margin: 0;
   }
 
-  header img {
-    width: 100px;
-    height: auto;
-    
-  }
-
   nav ul {
   display: flex;
 	flex-direction: column;
@@ -35,10 +29,6 @@
   header nav {
     margin-right: 1rem;
     font-size: 2.5rem;
-  }
-
-  header h1 {
-    margin: 1rem;
   }
 
   header nav ul {

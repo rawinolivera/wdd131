@@ -13,7 +13,7 @@ header {
 }
 
 header img {
-  width: 60%;
+  width: 70px;
   height: auto;
   text-align: center;
   padding: .5rem;
@@ -185,11 +185,6 @@ input[type=submit] {
   font-size: 1.5rem;
 }
 
-header img {
-    width: 100px;
-    height: auto;
-}
-
 footer {
   margin: 0rem;
   padding: 1rem;
@@ -249,10 +244,6 @@ footer > :nth-child(2){
   header nav {
     margin-right: 1rem;
     font-size: 2.5rem;
-  }
-
-  header h1 {
-    margin: 1rem;
   }
 
   header nav ul {
