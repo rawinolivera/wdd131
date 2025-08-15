@@ -139,7 +139,7 @@
   .home-s2 .random {
     padding-top: .5rem;
     grid-column: 2 / 4;
-    background-color: rgba(163, 229, 255, 0.3);
+    background-color: #d7efff;
   }
 
   .hero {
