@@ -24,39 +24,44 @@ const lon = -46.633308;
 
 /*------  WEATHER API  ------*/
 const apiKey = '0c8a48091627e17ece4ad85f202a2799'
-const apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;;
+const apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
 fetch(apiURL)
-  .then((response) => response.json())
-  .then((jsObject) => {
-    console.log(jsObject);
-    document.querySelector('#temp').textContent = jsObject.main.temp;  //t
-    document.querySelector('#wind').textContent = jsObject.wind.speed;  //s
+.then((response) => response.json())
+.then((jsObject) => {
+  let te = jsObject.main.temp;
+  let sp = jsObject.wind.speed;
+  document.querySelector('#temp').textContent = `${te} °C`;  //t
+  document.querySelector('#wind').textContent = `${sp} Km`;  //s
 
 
-    const desc = jsObject.weather[0].description; //w-now
-    const iconsrc= `https://openweathermap.org/img/w/${jsObject.weather[0].icon}.png`;
-    document.querySelector('#wlogo').setAttribute('src', iconsrc);
-    document.querySelector('#wlogo').setAttribute('alt', desc);
-    document.querySelector('#condit').textContent = desc;
-  });  
+  const desc = jsObject.weather[0].description; //w-now
+  const iconsrc= `https://openweathermap.org/img/w/${jsObject.weather[0].icon}.png`;
 
-let te = parseFloat(document.querySelector("#temp").textContent);
-let sp = parseFloat(document.querySelector("#wind").textContent);
-let windchill = "";
+  const icon = document.querySelector(".icon");
+  let img = document.createElement("img");
+  img.setAttribute('src', iconsrc);
+  img.setAttribute('alt', desc);
 
-if (te <= 50 && sp > 3){
-    windchill = windChill(te, sp);
-    windchill = `${windchill}&#176;F`;
-} else {
-    windchill = "N/A";
-} 
-//output
-document.querySelector("#w-chill").innerHTML = windchill;
+  icon.appendChild(img);
+  document.querySelector('#condit').textContent = desc;
 
-function windChill(te,sp) {
-    return Math.round(35.74 + .6215 * te - 35.75 * Math.pow(sp, 0.16) + 0.4275 * te * Math.pow(s, 0.16));
-}
+  let windchill = "";
+
+  if (te <= 50 && sp > 3){
+      windchill = windChill(te, sp);
+      windchill = `${windchill} °C`;
+  } else {
+      windchill = "N/A";
+  } 
+  //output
+  document.querySelector("#w-chill").innerHTML = windchill;
+
+  function windChill(te,sp) {
+    return Math.round((13.12 + 0.6215 * te - 11.37 * Math.pow(sp, 0.16) + 0.3965 * te * Math.pow(sp, 0.16)) * 100) / 100;
+  }
+}); 
+
 
 //Random Quotes Data
 const quotes = [

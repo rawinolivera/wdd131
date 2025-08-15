@@ -80,7 +80,6 @@ ul a {
 }
 
 nav a:hover {
-  border: 1px solid black;
   background-color: black;
   color: white;
   padding: .5rem;
@@ -118,7 +117,12 @@ nav a:hover {
   background-color: rgba(106, 137, 150, 0.3);
 }
 
-.box h2 + img {
+.autor {
+  font-weight: bold;
+  text-align: right;
+}
+
+.box h2 + .icon {
   display: inline-block; /* aligning img and h2 */
   vertical-align: middle;
   margin-left: 10px;     /* little gap */
@@ -142,7 +146,7 @@ nav a:hover {
   font-size: 3.5vh;
 }
 
-.box img {
+.box .icon {
   width: 20%;
 }
 

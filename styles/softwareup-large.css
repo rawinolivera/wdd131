@@ -113,17 +113,15 @@
     padding: .1rem;
     font-size: 3vh;
     line-height: 1.2;
-    text-align: right;
   }
 
 }
-
 
 @media (min-width: 600px) and (max-width: 1020px) {
 
   .home {
     display: grid;
-    grid-column: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
     
   .home-s2 {
@@ -135,6 +133,7 @@
 
   .home-s2 .box {
     grid-column: 1 / 2;
+    padding-top: .5rem;
   }
 
   .home-s2 .random {
