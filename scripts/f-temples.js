@@ -119,7 +119,7 @@ const temples = [
   // Add more temple objects here...
 ];
 
-createTempleCard(temples);
+createTempleCard(temples);  
 
 const oldTemples = document.querySelector("#old");
 const newTemples = document.querySelector("#new");
